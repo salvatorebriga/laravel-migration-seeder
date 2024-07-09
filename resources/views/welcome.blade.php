@@ -1,23 +1,34 @@
 @extends('layouts.app')
 
 @section('main')
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-
-    @foreach ($trains as $train)
-      <div class="col">
-        <div class="card mb-5 p-4">
-          <p><strong>Azienda: </strong> {{ $train->azienda }}</p>
-          <p><strong>Partenza:</strong> {{ $train->stazione_di_partenza }}</p>
-          <p><strong>Arrivo:</strong> {{ $train->stazione_di_arrivo }}</p>
-          <p><strong>Codice Treno:</strong> {{ $train->codice_treno }}</p>
-          <p><strong>Numero Carrozze:</strong> {{ $train->numero_carrozze }}</p>
-          <p><strong>In Orario:</strong> {{ $train->in_orario ? 'Sì' : 'No' }}</p>
-          <p><strong>Cancellato:</strong> {{ $train->cancellato ? 'Sì' : 'No' }}</p>
-          <p><strong>Creato il:</strong> {{ $train->created_at }}</p>
-          <p><strong>Aggiornato il:</strong> {{ $train->updated_at }}</p>
-        </div>
-      </div>
-    @endforeach
-    </ul>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Azienda</th>
+          <th>Partenza</th>
+          <th>Arrivo</th>
+          <th>Codice Treno</th>
+          <th>Numero Carrozze</th>
+          <th>In Orario</th>
+          <th>Cancellato</th>
+          <th>Partenza</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach ($trains as $train)
+          <tr>
+            <td>{{ $train->azienda }}</td>
+            <td>{{ $train->stazione_di_partenza }}</td>
+            <td>{{ $train->stazione_di_arrivo }}</td>
+            <td>{{ $train->codice_treno }}</td>
+            <td>{{ $train->numero_carrozze }}</td>
+            <td>{{ $train->in_orario ? 'Sì' : 'No' }}</td>
+            <td>{{ $train->cancellato ? 'Sì' : 'No' }}</td>
+            <td>{{ $train->partenza }}</td>
+          </tr>
+        @endforeach
+      </tbody>
+    </table>
   </div>
 @endsection

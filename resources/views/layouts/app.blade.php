@@ -20,7 +20,9 @@
         @yield('main')
       </main>
       <footer>
-        Sono il footer
+        La visualizzazione è determinata dalla data odierna globale (utilizzando Carbon), quindi dopo qualche giorno
+        diciamo che non verrà
+        visualizzato nessun dato per ovvi motivi
       </footer>
     </div>
 

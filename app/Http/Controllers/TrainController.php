@@ -17,4 +17,9 @@ class TrainController extends Controller
             ->get();
         return view('trains', compact('trains'));
     }
+
+    public function show(Train $train)
+    {
+        return view('show', compact('train'));
+    }
 }

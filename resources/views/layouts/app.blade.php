@@ -12,18 +12,12 @@
   <body class="bg-dark text-light">
     {{-- <img src="{{ Vite::asset('resources/img/duck.jpg') }}" alt="Paperella Laravel Template"> --}}
 
-    <div class="container text-center">
-      <header class="py-3">
-        <h1>Treni</h1>
-      </header>
+    <div class="container">
+      @include('shared.header')
       <main>
         @yield('main')
       </main>
-      <footer>
-        La visualizzazione è determinata dalla data odierna globale (utilizzando Carbon), quindi dopo qualche giorno
-        diciamo che non verrà
-        visualizzato nessun dato per ovvi motivi
-      </footer>
+      @include('shared.footer')
     </div>
 
 

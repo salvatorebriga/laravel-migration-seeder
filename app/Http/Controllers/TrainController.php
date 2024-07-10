@@ -12,9 +12,9 @@ class TrainController extends Controller
     {
         $today = Carbon::now()->format('Y-m-d');
 
-        $trains = Train::whereDate('partenza', '>=', $today)
-            ->orderBy('partenza', 'asc')
+        $trains = Train::whereDate('orario_di_partenza', '>=', $today)
+            ->orderBy('orario_di_partenza', 'asc')
             ->get();
-        return view('welcome', compact('trains'));
+        return view('trains', compact('trains'));
     }
 }

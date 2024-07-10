@@ -9,6 +9,9 @@ body {
                 .table {
                     tbody {
                         tr {
+                            &:hover {
+                                cursor: pointer;
+                            }
                             td {
                                 i {
                                     margin-right: 5px;

@@ -3,4 +3,35 @@
 
 body {
     background-color: white;
+    .container-full {
+        main {
+            .table-responsive {
+                .table {
+                    tbody {
+                        tr {
+                            td {
+                                i {
+                                    margin-right: 5px;
+                                }
+                                .blue {
+                                    &:hover {
+                                        text-decoration: underline;
+                                        cursor: pointer;
+                                        color: blue;
+                                    }
+                                }
+                                .red {
+                                    &:hover {
+                                        text-decoration: underline;
+                                        cursor: pointer;
+                                        color: red;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

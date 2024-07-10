@@ -14,9 +14,9 @@
 
     <div class="container">
       @include('shared.header')
-      <main>
-        @yield('main')
-      </main>
+
+      @yield('main')
+
       @include('shared.footer')
     </div>
 

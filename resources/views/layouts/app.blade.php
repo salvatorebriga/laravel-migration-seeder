@@ -12,7 +12,7 @@
   <body class="bg-dark text-light">
     {{-- <img src="{{ Vite::asset('resources/img/duck.jpg') }}" alt="Paperella Laravel Template"> --}}
 
-    <div class="container">
+    <div class="container-full p-5">
       @include('shared.header')
 
       @yield('main')
